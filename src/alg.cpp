@@ -13,11 +13,11 @@ BST<std::string> makeTree(const char* filename) {
         std::cout << "File error!" << std::endl;
         //return;
     } else {
-        while (!file.eof())	{
+        while (!file.eof()) {
             val.erase();
             while (true) {
                 int ch = file.get();
-                if (ch >= 99 && ch <= 122) {
+                if (ch >= 95 && ch <= 122) {
                     val += ch;
                 } else if (ch >= 65 && ch <= 90) {
                     ch += 32;
