@@ -8,7 +8,7 @@ template<typename T>
 class BST {
  private:
     struct Node {
-        value;
+        T value;
         uint64_t count;
         Node* left, *right;
     };
@@ -24,7 +24,7 @@ class BST {
 
 template<typename T>
 typename BST<T>::Node* BST<T>::addNode(Node* root, const T& value) {
-	if (root == nullptr) {
+    if (root == nullptr) {
         root = new Node;
         root->value = value;
         root->count = 1;
@@ -58,10 +58,11 @@ int BST<T>::getDepthTree(Node* root) {
         return 0;
     int leftDepth = getDepthTree(root->left);
     int rightDepth = getDepthTree(root->right);
-    if (leftDepth > rightDepth)
+    if (leftDepth > rightDepth) {
         return leftDepth + 1;
-	else
+    } else {
         return rightDepth + 1;
+    }
 }
 
 template<typename T>
@@ -71,7 +72,7 @@ void BST<T>::add(const T& value) {
 
 template<typename T>
 int BST<T>::search(const T& value) {
-    root = searchTree(root, value);
+    return searchTree(root, value);
 }
 
 template<typename T>
