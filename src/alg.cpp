@@ -16,7 +16,7 @@ BST<std::string> makeTree(const char* filename) {
         while (!file.eof()) {
             val.erase();
             while (true) {
-                int ch = file.get();
+                char ch = file.get();
                 if (ch >= 95 && ch <= 122) {
                     val += ch;
                 } else if (ch >= 65 && ch <= 90) {
