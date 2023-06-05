@@ -44,9 +44,9 @@ int BST<T>::searchTree(Node* root, const T& value) {
     if (root == nullptr)
         return 0;
     else if (root->value > value)
-        searchTree(root->left, value);
+        return searchTree(root->left, value);
     else if (root->value < value)
-        searchTree(root->left, value);
+        return searchTree(root->left, value);
     else
         return root->count;
     return 0;
