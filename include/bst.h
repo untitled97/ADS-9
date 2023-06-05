@@ -34,7 +34,7 @@ typename BST<T>::Node* BST<T>::addNode(Node* root, const T& value) {
     } else if (root->value < value) {
         root->right = addNode(root->right, value);
     } else {
-        root->count++;
+        root->count+=1;
     }
     return root;
 }
